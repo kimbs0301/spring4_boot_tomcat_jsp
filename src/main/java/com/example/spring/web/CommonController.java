@@ -20,7 +20,7 @@ import com.example.spring.logic.test.TestService;
 @Controller
 public class CommonController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(CommonController.class);
-	
+
 	@Autowired
 	private TestService testService;
 
@@ -37,7 +37,9 @@ public class CommonController {
 	public String index() {
 		LOGGER.debug("springloaded");
 		testService.test();
-		// testService.test("ok");
+		// java.util.Map<String, Object> params = new java.util.HashMap<>();
+		// params.put("test", "ok");
+		// testService.test(params);
 		return "index";
 	}
 

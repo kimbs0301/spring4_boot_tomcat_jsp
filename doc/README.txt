@@ -8,6 +8,18 @@
 java -server -Xms256m -Xmx256m -XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1SummarizeConcMark -XX:InitiatingHeapOccupancyPercent=35 -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=local -jar target/spring-0.0.1-SNAPSHOT.jar
 
 
+
+테스트 순서
+
+서버 구동
+curl -v "http://localhost:8080/mvc/" 호츌
+com.example.spring.logic.test.TestService 수정
+com.example.spring.logic.test.impl.TestServiceImpl 수정
+com.example.spring.web.CommonController index 메소드 수정
+curl -v "http://localhost:8080/mvc/" 호츌
+
+
+
 cd /workspace/luna/spring4_boot_tomcat_jsp
 git add -A
 git commit -a -m "ok"

@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 
 import com.example.spring.logic.test.TestService;
 
+/**
+ * @author gimbyeongsu
+ * 
+ */
 @Service
 public class TestServiceImpl implements TestService {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TestServiceImpl.class);
@@ -16,7 +20,7 @@ public class TestServiceImpl implements TestService {
 	}
 
 	// @Override
-	// public void test(String params) {
+	// public void test(java.util.Map<String, Object> params) {
 	// LOGGER.debug("test {}", params);
 	// }
 }
